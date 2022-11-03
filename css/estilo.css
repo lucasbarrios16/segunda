@@ -1,0 +1,331 @@
+
+.flexPadre
+{
+    display: flex;
+    justify-content: center;
+}
+/* CONTENEDOR PADRE */
+
+/* VERSIÓN CELULAR */
+/* Si la pantalla tiene un mínimo de 768px ejecuto el siguiente código: */
+    @media (min-width:350px) {
+        .gridPadre{
+            display: grid;
+            grid-template-areas: 
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"
+            "cinco"
+            "seis";
+        }
+    }
+        /* VERSIÓN DE TABLET  */
+        /* Medium	md	≥768px */
+        @media  (min-width:768px) {
+            .gridPadre {
+                column-gap: 5px;
+                row-gap: 8px; 
+                grid: center;
+                grid-template-areas: 
+                "uno dos"
+                "tres cuatro"
+                "cinco seis";
+                
+            }
+        
+        }
+    /* VERSIÓN DE ESCRITORIO  */
+        @media  (min-width:1024px) {
+        .gridPadre {
+            column-gap: 5px;
+            row-gap: 8px; 
+            grid: center;
+            grid-template-areas: 
+            "uno dos tres"
+            "cuatro cinco seis";
+            
+        }
+    
+    }
+
+.item {
+    
+    border: 4px rgb(4, 248, 155) solid;
+    height: 220px;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.item p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.primero {
+   
+    background-image: url(../img/Motorola.jpg);
+    background-size: 400px;
+    background-position-x: center;
+    background-position-y: center;  
+
+    grid-area: uno;
+}
+
+.segundo {
+    /* background-color: #0011ff; */
+    background-image: url(../img/Iphone.jpg);
+    background-size: 260px;
+    background-position-x: center;
+    background-position-y: center;  
+
+    grid-area: dos;
+}
+
+.tercero {
+    
+    background-image: url(../img/Samsung.jpg);
+    background-size: 270px;
+    background-position-x: center;
+    background-position-y: center;  
+
+    grid-area: tres;
+}
+.cuarto {
+   
+    background-image: url(../img/lg-2.png);
+    background-size: 220px;
+    background-position-x: center;
+    background-position-y: center; 
+    
+    grid-area: cuatro;
+}
+
+.quinto {
+   
+    background-image: url(../img/Xiaomi.png);
+    background-size: 800px;
+    background-position-x: center;
+    background-position-y: center;  
+
+    grid-area: cinco;
+}
+
+.sexto {
+   
+    background-image: url(../img/huawei.jpg);
+    background-size: 230px;
+    background-position-x: center;
+    background-position-y: center;  
+
+    grid-area: seis;
+}
+
+/* MOBILE FIRST */
+body
+{
+    background-color: black;
+}
+
+header {
+    
+    grid-area: header;
+ 
+}
+
+nav {
+    background-color: #016352;
+    grid-area: nav;
+ 
+}
+h1
+{
+    color: rgb(0, 0, 0);
+}
+h2
+{
+    color:azure;
+}
+.parrafoFootera {
+    color: rgb(0, 0, 0);
+
+    font-weight: bold;
+    /*negrita*/
+
+    font-family: 'Courier New', Courier, monospace;
+    /*cambiamos la fuente*/
+}
+.padreCard
+{
+    display:flex; 
+    flex-direction:column;
+    align-items:center; 
+}
+aside {
+
+    grid-area: publicidad;
+   
+    background-image: url("../img/Adobe_Express_20221005_1054090_1.png");
+    background-size: 600px;
+    background-position-x: center;
+    background-position-y: center;   
+
+    }
+
+main {
+    background-color: #000000;
+    grid-area: main;
+
+}
+
+.primerSeccion {
+    background-color: #000000;
+    grid-area: seccionA;
+    /* height: 200px; */
+}
+
+.segundaSeccion {
+    background-color: #00ff80;
+    grid-area: seccionB;
+    /* height: 200px; */
+}
+
+
+footer {
+    background-color: #000000;
+    grid-area: footer;
+    color: white;
+    /* height: 200px; */
+}
+
+.base
+{
+    background-color: aqua;
+    grid-area: texto;
+    /* border: 4px rgb(4, 248, 155) solid;
+    height: 220px;
+    width: 200px; */
+}
+.bandera
+{
+    background-color: red;
+    grid-area: textodos;
+    /* border: 4px rgb(4, 248, 155) solid;
+    height: 220px;
+    width: 200px; */
+}
+.imagen
+{
+   
+    background-image: url(../img/calamardo.jpg);
+    background-size: 600px;
+    background-position-x: center;
+    background-position-y: center;  
+    grid-area: imagenuno;
+}
+.simagen
+{
+   
+    background-image: url(../img/Ricky.jpg);
+    background-size: 600px;
+    background-position-x: center;
+    background-position-y: center;  
+    grid-area: imagendos;
+}
+
+/* CELULAR */
+@media  (max-width:767px) and (min-width:350px) {
+    .gridNosotros
+    {
+        display: grid;
+        grid-template-rows: 1fr 11fr 1fr 11fr;
+        grid-template-areas: 
+        "texto"
+        "imagenuno"
+        "textodos"
+        "imagendos"
+    }
+    }
+    /* TABLETA */
+    @media  (max-width:1024px) and (min-width:768px) {
+        .gridNosotros
+        {
+            display: grid;
+            grid-template-rows: 1fr 11fr  1fr 11fr;
+            grid-template-areas: 
+            "texto"
+            "imagenuno" 
+            "textodos"
+            "imagendos";
+        }
+        
+        }
+     /* VERSIÓN DE ESCRITORIO  */
+
+     @media  (max-width:1700px) and (min-width:1024px){
+        .gridNosotros
+        {
+            display: grid;
+            grid-template-rows: 1fr 11fr  ;
+            grid-template-areas: 
+            "texto textodos"
+            "imagenuno imagendos"
+        }
+        
+        }
+
+/* CONTENEDOR PADRE */
+
+.gridContenedor {
+    text-align: center;
+}
+
+
+/* VERSIÓN MOVIL  */
+
+    @media (min-width:350px) {
+    .gridContenedor {
+        display: grid;
+        grid-template-rows: 1fr 1fr fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "publicidad publicidad"
+        "nav nav"
+        "main main"
+        "seccionA seccionA"
+        "seccionB seccionB"
+        "footer footer";
+    }
+}
+/* VERSIÓN TABLETA  */
+    @media  (min-width:768px) {
+        .gridContenedor {
+            display: grid;
+
+            grid-template-areas: 
+            "header header"
+            "nav publicidad"
+            "main main"
+            "seccionA seccionA"
+            "seccionB seccionB"
+            "footer footer";
+        }
+    }
+    
+/* VERSIÓN DE ESCRITORIO  */
+
+    @media  (min-width:1024px) {
+    .gridContenedor {
+
+        grid-template-areas: 
+        "header header header header"
+        "nav publicidad publicidad publicidad"
+        "main main main main"
+        "seccionA seccionA seccionA seccionA"
+        "seccionB seccionB seccionB seccionB"
+        "footer footer footer footer";
+    }
+
+}
